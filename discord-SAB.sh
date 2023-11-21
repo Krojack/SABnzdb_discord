@@ -95,7 +95,7 @@ if [ "${DEBUG}" == "1" ]; then
 	exit;
 fi
 
-echo "$(POST_JSON)" >> json.out
+echo "$(POST_JSON)" > json.out
 curl -H "Content-Type: application/json" -X POST -d "$(POST_JSON)" $WEBHOOK
 
 
